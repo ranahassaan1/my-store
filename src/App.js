@@ -3,7 +3,7 @@ import "./App.css";
 import NavBar from "./Components/NavBar";
 import SliderImgs from "./Components/SliderImgs";
 import CategoryMenu from "./Components/CategoryMenu";
-import ProductSliderImgs from "./Components/ProductSliderImgs";
+import Products from "./Components/Products";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       <CategoryMenu />
       <SliderImgs />
-      <ProductSliderImgs />
+      <Products />
     </>
   );
 }

@@ -8,7 +8,12 @@ import { Button } from "react-bootstrap";
 function NextArrow(props) {
   const { onClick } = props;
   return (
-    <Button type="button" variant="outline-secondary" className="arrow-btn arrow-next" onClick={onClick}>
+    <Button
+      type="button"
+      variant="outline-secondary"
+      className="arrow-btn arrow-next"
+      onClick={onClick}
+    >
       next
     </Button>
   );
@@ -17,7 +22,12 @@ function NextArrow(props) {
 function PrevArrow(props) {
   const { onClick } = props;
   return (
-    <Button type="button" variant="outline-secondary" className="arrow-btn arrow-prev" onClick={onClick}>
+    <Button
+      type="button"
+      variant="outline-secondary"
+      className="arrow-btn arrow-prev"
+      onClick={onClick}
+    >
       prev
     </Button>
   );
@@ -70,20 +80,20 @@ const ProductSlider = (props) => {
               <a href="http://">view more</a>
             </div>
             <Slider {...settings}>
-              {props.images.map((prodcutimgs) => {
+              {props.images.map((products) => {
                 return (
-                  <article key={prodcutimgs} className="product-card">
+                  <article key={products.image} className="product-card">
                     <a href="//" className="product-img">
-                      <img src={prodcutimgs} alt="" className="img-fluid" />
+                      <img src={products.image} alt="" className="img-fluid" />
                     </a>
                     <a
                       href="//"
                       className="card-body p-2 d-block text-decoration-none"
                     >
-                      <p className="product-name">heir AC</p>
-                      <h4 className="product-price">70,000 pkr</h4>
+                      <p className="product-name">{products.name}</p>
+                      <h4 className="product-price">{products.price}</h4>
                       <small className="product-dateposted text-black-50 text-capitalize">
-                        lahore, 1 week ago
+                        lahore, {products.date}
                       </small>
                     </a>
                   </article>
